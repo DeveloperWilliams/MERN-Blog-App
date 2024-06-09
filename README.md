@@ -32,3 +32,8 @@ The MERN Blog App is a full-stack blogging application built using the MERN stac
    ```sh
    git clone https://github.com/DeveloperWilliams/MERN-Blog-App.git
    cd mern-blog-app
+
+
+### Contribution
+  
+  Feeling there is a need for a change, or improvement? Feel free to submit a pull request, ill surely respond immediately.
