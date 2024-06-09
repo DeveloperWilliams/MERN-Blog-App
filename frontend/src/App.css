@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*    
+   font-family: "Pacifico", cursive;
+   font-family: "Kanit", sans-serif;
+   font-family: "Roboto Slab", serif;
+   font-family: "Oswald", sans-serif;
+*/
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container form {
+  height: 80%;
+  width: 400px;
+}
+.container form img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Slab", serif;
+  font-family: "Kanit", sans-serif;
+}
+.myform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Pacifico", cursive;
+  gap: 10px;
+  padding: 2px 0px;
+}
+.myform em {
+  font-size: 30px;
+}
+.myform div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.myform .mydiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  text-align: right;
+  font-family: "Pacifico", cursive;
+  font-family: "Kanit", sans-serif;
+}
+.myform input {
+  width: 90%;
+  height: 40px;
+  padding: 0px 10px;
+  outline: none;
+  font-family: "Pacifico", cursive;
+  font-family: "Kanit", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  border: 0px;
+  border-bottom: 1px solid;
+}
+.myform a {
+  font-family: cursive;
+  text-decoration: none;
+  color: grey;
+  font-style: italic;
+}
+.myform input::placeholder {
+  color: rgb(44, 44, 1);
+  font-family: "Pacifico", cursive;
+  font-family: "Kanit", sans-serif;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 12px;
+}
+.myform .second-div {
+  display: flex;
+  gap: 8px;
+}
+.myform .second-div button {
+  height: 35px;
+  border: 0px;
+  background-color: rgb(107, 107, 7);
+  color: white;
+  cursor: pointer;
+  font-family: "Pacifico", cursive;
+  font-family: "Kanit", sans-serif;
+}
+.myform .second-div p {
+  text-align: right;
+}
