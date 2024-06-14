@@ -6,15 +6,15 @@ The MERN Blog App is a full-stack blogging application built using the MERN stac
 
 ## Images
 
-### Image One
+### Signup Form
 
 ![Image One](img/one.png)
 
-### Image Two
+### Reset Password Form
 
 ![Image Two](img/two.png)
 
-### Image Three
+### Login Form
 
 ![Image Three](img/three.png)
 
