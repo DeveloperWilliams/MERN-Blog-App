@@ -6,24 +6,37 @@ The MERN Blog App is a full-stack blogging application built using the MERN stac
 
 ## Features
 
-- User Authentication (Register, Login, Logout)
-- Create, Read, Update, and Delete (CRUD) blog posts
-- User-specific post management
-- Responsive design
+- **User Authentication:** Register, Login, Logout
+- **CRUD Operations:** Create, Read, Update, and Delete blog posts
+- **User-specific Post Management:** Users can manage their own posts
+- **Responsive Design:** Ensures usability across various devices
 
 ## Technologies Used
 
-- **Frontend:** React, Redux, Axios, Css
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB, Mongoose
-- **Authentication:** JSON Web Tokens (JWT), bcrypt
+### Frontend
+- **React:** A JavaScript library for building user interfaces
+- **Redux:** State management library
+- **Axios:** Promise-based HTTP client
+- **CSS:** Styling
+
+### Backend
+- **Node.js:** JavaScript runtime built on Chrome's V8 JavaScript engine
+- **Express.js:** Web framework for Node.js
+
+### Database
+- **MongoDB:** NoSQL database
+- **Mongoose:** MongoDB object modeling tool
+
+### Authentication
+- **JSON Web Tokens (JWT):** For secure user authentication
+- **bcrypt:** For password hashing
 
 ## Installation
 
 ### Prerequisites
 
-- Node.js
-- MongoDB
+- **Node.js:** Install from [Node.js official website](https://nodejs.org/)
+- **MongoDB:** Install from [MongoDB official website](https://www.mongodb.com/)
 
 ### Steps
 
