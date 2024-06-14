@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser()); 
 
 
-//ROUTES
+//ROUTES 
 //import
 import authRoute from "./routes/auth.js"
 
