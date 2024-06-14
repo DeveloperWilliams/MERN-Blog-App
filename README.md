@@ -1,3 +1,17 @@
+## Images
+
+### Image One
+
+![Image One](img/one.png)
+
+### Image Two
+
+![Image Two](img/two.png)
+
+### Image Three
+
+![Image Three](img/three.png)
+
 # MERN Blog App
 
 ## Description
@@ -82,17 +96,3 @@ The MERN Blog App is a full-stack blogging application built using the MERN stac
     npm install
     npm start
    ```
-
-## Images
-
-### Image One
-
-![Image One](img/one.png)
-
-### Image Two
-
-![Image Two](img/two.png)
-
-### Image Three
-
-![Image Three](img/three.png)
