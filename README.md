@@ -109,7 +109,7 @@ We welcome contributions from the community! If you'd like to contribute, please
 5. Push your changes to your forked repository.
 6. Open a Pull Request to the main repository, providing a detailed description of your changes and the problem they solve.
 
-Please make sure your code adheres to our coding standards and passes all tests.
+Please make sure your code adheres to my coding standards and passes all tests.
 
 
 ## License
