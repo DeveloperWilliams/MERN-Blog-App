@@ -105,7 +105,7 @@ We welcome contributions from the community! If you'd like to contribute, please
 1. Fork the repository to your own GitHub account.
 2. Clone the forked repository to your local machine.
 3. Create a new branch with a descriptive name for your feature or bug fix.
-4. Make your changes and commit them with clear and descriptive commit messages.
+4. Make your changes and commit them with clear and descriptive commit messages
 5. Push your changes to your forked repository.
 6. Open a Pull Request to the main repository, providing a detailed description of your changes and the problem they solve.
 
