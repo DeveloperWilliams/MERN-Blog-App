@@ -11,12 +11,12 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(cookieParser());
+app.use(cookieParser()); 
 
 
 //ROUTES
 //import
-import authRoute from "./routes/auth"
+import authRoute from "./routes/auth.js"
 
 
 //using routes
