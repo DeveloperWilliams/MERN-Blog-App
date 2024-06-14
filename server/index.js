@@ -13,6 +13,15 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
+
+//ROUTES
+//import
+import authRoute from "./routes/auth"
+
+
+//using routes
+app.use('/auth', authRoute)
+
 // MongoDB
 mongoose
   .connect(process.env.MONGO_URL)
