@@ -67,4 +67,30 @@ router.get(`/verify/:token`, async (req, res) => {
   }
 });
 
+//login route
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await Usermodel.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "Email not found" });
+    }
+
+    if (!user.isVerified) {
+      return res
+        .status(400)
+        .json({ message: `Email not Verified`, redirect: "/notverified" });
+    }
+
+    const isMatch = await bcrypt.compare(user.password, password);
+
+    if (!isMatch) {
+      return res.status(400).json({message: "Password do not match"})
+    }
+  } catch (error) {
+    res.status(500).json(error.message)
+  }
+});
+
 export default router;
