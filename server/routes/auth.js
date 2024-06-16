@@ -6,7 +6,7 @@ import Usermodel from "../model/User.js";
 
 const router = express.Router();
 
-//nodemailer setup
+// nodemailer setup
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-//register route
+// Register route
 router.post("/register", async (req, res) => {
   const { email, password, confirmedPassword } = req.body;
 
@@ -24,6 +24,12 @@ router.post("/register", async (req, res) => {
   }
 
   try {
+    // Check if the email already exists
+    const existingUser = await Usermodel.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "Email Already Exists" });
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = new Usermodel({ email, password: hashedPassword });
     await user.save();
@@ -46,7 +52,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-//token verifying route
+// Token verifying route
 router.get(`/verify/:token`, async (req, res) => {
   try {
     const { token } = req.params;
@@ -67,7 +73,7 @@ router.get(`/verify/:token`, async (req, res) => {
   }
 });
 
-//login route
+// Login route
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -102,7 +108,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-//forgot password route
+// Forgot password route
 router.post("/forgot", async (req, res) => {
   const { email } = req.body;
 
@@ -131,7 +137,7 @@ router.post("/forgot", async (req, res) => {
   }
 });
 
-//reset password route
+// Reset password route
 router.post("/reset/:token", async (req, res) => {
   const { token } = req.params;
   const { password, confirmedPassword } = req.body;
@@ -152,7 +158,7 @@ router.post("/reset/:token", async (req, res) => {
     user.password = hashedPassword;
     await user.save();
 
-    res.status(200).json({message: "Password Updated", redirect: "/login"})
+    res.status(200).json({ message: "Password Updated", redirect: "/login" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
