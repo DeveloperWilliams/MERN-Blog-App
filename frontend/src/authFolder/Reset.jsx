@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
-import "./auth.css";
+import './auth.css'
 
-const Reset = () => {
+const Signup = () => {
   return (
     <>
       <div className="home">
@@ -41,4 +41,4 @@ const Reset = () => {
   );
 };
 
-export default Reset;
+export default Signup;
