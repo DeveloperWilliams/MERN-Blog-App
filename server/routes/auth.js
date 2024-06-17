@@ -84,9 +84,7 @@ router.post("/login", async (req, res) => {
     }
 
     if (!user.isVerified) {
-      return res
-        .status(400)
-        .json({ message: "Email Not Verified", redirect: "/notverified" });
+      return res.status(400).json({ message: "Email Not Verified", redirect: "/notverified" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -102,11 +100,12 @@ router.post("/login", async (req, res) => {
     );
 
     res.cookie("token", token, { httpOnly: true });
-    res.status(200).json({ message: "Login Successful", redirect: "/blog" });
+    res.status(200).json({ message: "Login Successful", redirect: "/home" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
+
 
 // Forgot password route
 router.post("/forgot", async (req, res) => {
