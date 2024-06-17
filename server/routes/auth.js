@@ -10,8 +10,8 @@ const router = express.Router();
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASS
+    user: "archywilliams2@gmail.com",
+    pass: "kfsr ntuc uzkg wnen",
   },
 });
 
@@ -84,7 +84,9 @@ router.post("/login", async (req, res) => {
     }
 
     if (!user.isVerified) {
-      return res.status(400).json({ message: "Email Not Verified", redirect: "/notverified" });
+      return res
+        .status(400)
+        .json({ message: "Email Not Verified", redirect: "/notverified" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -105,7 +107,6 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 // Forgot password route
 router.post("/forgot", async (req, res) => {

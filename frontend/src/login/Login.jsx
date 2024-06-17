@@ -16,17 +16,28 @@ const Login = () => {
         email,
         password,
       });
-      if (response.data.message === "Email Not Found") {
-        alert("Email Not Found");
-      } else if (response.data.message === "Password Does Not Match") {
-        alert("Incorrect Password");
-      } else if (response.data.message === "Login Successful") {
+
+      // This part will be executed only if the status code is in the range of 2xx
+      if (response.data.message === "Login Successful") {
         navigate("/home");
-      } else if (response.data.message === "Email Not Verified") {
-        navigate(response.data.redirect);
       }
     } catch (error) {
-      alert(error.message);
+      // This part will be executed for any status code outside the range of 2xx
+      if (error.response) {
+        const { message, redirect } = error.response.data;
+
+        if (message === "Email Not Found") {
+          alert("Email Not Found");
+        } else if (message === "Password Does Not Match") {
+          alert("Incorrect Password");
+        } else if (message === "Email Not Verified") {
+          navigate(redirect);
+        } else {
+          alert(message); // Generic alert for any other messages
+        }
+      } else {
+        alert(error.message); // Fallback alert if there is no response from server
+      }
     }
   };
 
