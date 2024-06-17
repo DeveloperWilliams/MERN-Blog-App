@@ -87,7 +87,7 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <Link to="/reset-password">Reset Password</Link>
+              <Link to="/forgot-password">Reset Password</Link>
             </div>
             <div className="second-div">
               <button type="submit" disabled={loading}>
