@@ -1,8 +1,8 @@
 import React from 'react'
 import {Route, Routes} from "react-router-dom"
-import Login from './login/Login'
-import Signup from './signup/Signup'
-import Forgot from './forgot/Forgot'
+import Login from './authFolder/Login'
+import Signup from './authFolder/Signup'
+import Forgot from './authFolder/Forgot'
 
 function App() {
   return (
