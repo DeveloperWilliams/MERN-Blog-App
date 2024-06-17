@@ -3,6 +3,8 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -27,22 +29,33 @@ const Login = () => {
         const { message, redirect } = error.response.data;
 
         if (message === "Email Not Found") {
-          alert("Email Not Found");
+          toast.error("Email Not Found");
         } else if (message === "Password Does Not Match") {
-          alert("Incorrect Password");
+          toast.error("Incorrect Password");
         } else if (message === "Email Not Verified") {
           navigate(redirect);
         } else {
-          alert(message); // Generic alert for any other messages
+          toast.error(message); // Generic toast for any other messages
         }
       } else {
-        alert(error.message); // Fallback alert if there is no response from server
+        toast.error(error.message); // Fallback toast if there is no response from server
       }
     }
   };
 
   return (
     <div className="home">
+      <ToastContainer
+        position="top-center"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        theme="colored"
+        transition:Bounce
+      />
       <div className="container">
         <form>
           <img src="./login-pana.svg" alt="Login" srcSet="" />
