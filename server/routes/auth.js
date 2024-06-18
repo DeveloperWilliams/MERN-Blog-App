@@ -59,7 +59,7 @@ router.get(`/verify/:token`, async (req, res) => {
     const { userId } = jwt.verify(token, process.env.JWT_SECRET);
 
     const user = await Usermodel.findById(userId);
-
+  
     if (!user) {
       return res.status(400).json({ message: "Invalid Token" });
     }
@@ -148,7 +148,6 @@ router.post("/reset/:token", async (req, res) => {
 
   try {
     const { userId } = jwt.verify(token, process.env.JWT_SECRET);
-
     const user = await Usermodel.findById(userId);
     if (!user) {
       return res.status(400).json({ message: "Invalid Token" });
