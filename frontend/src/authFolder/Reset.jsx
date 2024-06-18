@@ -9,14 +9,13 @@ const Signup = () => {
       <div className="home">
         <div className="container">
           <form>
-            <img src="./signup.svg" alt="" srcset="" />
+            <img src="./reset.svg" alt="" srcset="" />
           </form>
           <form className="myform">
             <h3>
               Hi <em>👋</em>, Welcome!
             </h3>
             <div>
-              <input type="email" placeholder="Email Address" required />
               <div className="mydiv">
                 <input type="password" placeholder="New Password" required />
               </div>
@@ -28,10 +27,7 @@ const Signup = () => {
                 />
               </div>
               <div className="second-div">
-                <button>Signup</button>
-                <p>
-                  Already Having Account <Link to="/">Login</Link>
-                </p>
+                <button>Reset</button>
               </div>
             </div>
           </form>
