@@ -44,7 +44,7 @@ const Signup = () => {
       <div className="home">
         <ToastContainer
           position="top-center"
-          autoClose={5000}
+          autoClose={8000}
           newestOnTop={false}
           closeOnClick
           rtl={false}
