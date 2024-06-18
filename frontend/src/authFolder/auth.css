@@ -65,7 +65,12 @@
     font-size: 15px;
     border: 0px;
     border-bottom: 1px solid;
+    transition: 0.5s ease;
   }
+  .myform input:focus{
+    border-bottom: 2px solid;
+
+  } 
   .myform a {
     font-family: cursive;
     text-decoration: none;

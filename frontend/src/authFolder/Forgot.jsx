@@ -51,7 +51,7 @@ const Forgot = () => {
                   {loading ? "Loading" : "Reset"}
                 </button>
                 <p>
-                  <Link to="/" color="blue">
+                  <Link to="/login" color="blue">
                     Login Instead
                   </Link>
                 </p>
