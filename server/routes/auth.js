@@ -67,7 +67,7 @@ router.get(`/verify/:token`, async (req, res) => {
     user.isVerified = true;
     await user.save();
 
-    res.redirect("/login");
+    res.status(200).json({ message: "Verified", redirect: "/login" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
