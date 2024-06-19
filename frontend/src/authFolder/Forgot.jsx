@@ -4,6 +4,8 @@ import "./auth.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Forgot = () => {
   const [email, setEmail] = useState("");
@@ -14,22 +16,37 @@ const Forgot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/auth/forgot", {email});
-      console.log(response.data.message)
+      const response = await axios.post("http://localhost:5000/auth/forgot", {
+        email,
+      });
+      console.log(response.data.message);
 
       if (response.data.message === "Reset Link Sent") {
-        alert("Reset Link Sent to Email");
+        toast.success("Reset Link Sent to Email");
       }
     } catch (error) {
-      alert(error.message);
+      toast.error(error.response.data.message || error.message);
     } finally {
       setLoading(false);
+      setEmail("");
     }
   };
 
   return (
     <>
       <div className="home">
+        <ToastContainer
+          position="top-center"
+          autoClose={6000}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition={Bounce}
+        />
         <div className="container">
           <form>
             <img src="./forgot.svg" alt="" srcset="" />
