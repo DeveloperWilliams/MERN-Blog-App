@@ -123,7 +123,7 @@ router.post("/forgot", async (req, res) => {
       expiresIn: "1h",
     });
 
-    const url = `http://localhost:5173/reset/${token}`;
+    const url = `http://localhost:5173/reset-password/${token}`;
 
     await transporter.sendMail({
       to: user.email,
