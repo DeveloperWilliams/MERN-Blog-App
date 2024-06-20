@@ -3,6 +3,8 @@ import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
 import "./auth.css";
 import axios from "axios";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const [password, setPassword] = useState("");
@@ -26,13 +28,25 @@ const Signup = () => {
         navigate("/login");
       }
     } catch (error) {
-      alert(error.response.data.message || error.message);
+      toast.error(error.response.data.message || error.message);
     }
   };
 
   return (
     <>
       <div className="home">
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition={Bounce}
+        />
         <div className="container">
           <form>
             <img src="./forgot.svg" alt="" srcset="" />
