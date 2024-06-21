@@ -1,5 +1,5 @@
 .home {
-  height: 110vh;
+  height: 120vh;
   width: 100%;
   background: url("./homy.jpg");
   display: flex;
@@ -10,6 +10,12 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 120px;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: white;
 }
 h4 {
   font-family: "Pacifico", cursive;
@@ -32,19 +38,20 @@ h4 em {
   font-family: "Oswald", sans-serif;
 }
 .body {
-  height: 70vh;
+  padding-top: 30px;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: start;
 }
 .body img {
-  height: 70vh;
+  height: 90vh;
 }
 .lower {
   text-align: center;
   font-family: "Pacifico", cursive;
   font-size: 34px;
 }
-.lower em{
-    color: rgb(6, 188, 191);
+.lower em {
+  color: rgb(6, 188, 191);
 }
