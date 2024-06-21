@@ -1,7 +1,7 @@
 .home {
   height: 120vh;
   width: 100%;
-  background: url("./homy.jpg");
+  background: url("./test4.jpg");
   display: flex;
   flex-direction: column;
 }
@@ -15,7 +15,6 @@
   left: 0;
   right: 0;
   position: fixed;
-  background-color: white;
 }
 h4 {
   font-family: "Pacifico", cursive;
@@ -43,6 +42,7 @@ h4 em {
   display: flex;
   justify-content: center;
   align-items: start;
+  z-index: 0;
 }
 .body img {
   height: 90vh;

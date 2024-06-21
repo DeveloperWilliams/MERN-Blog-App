@@ -27,10 +27,12 @@ const Signup = () => {
       });
       if (response.data.message === "User Created") {
         toast.success("User Created Succesfully");
-        navigate("/login");
+        setTimeout(() => {
+          navigate("/login");
+        }, 5000);
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || "An error occurred");
+      toast.error(error.response?.data?.message || "Use Strong Password" );
     } finally {
       setLoading(false);
       setEmail("");
