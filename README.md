@@ -6,10 +6,6 @@ The MERN Blog App is a full-stack blogging application built using the MERN stac
 
 ## Images
 
-### Home Page
-
-![Image One](img/home.png)
-
 ### Login Form
 
 ![Image Three](img/login.png)
@@ -17,6 +13,10 @@ The MERN Blog App is a full-stack blogging application built using the MERN stac
 ### Signup Form
 
 ![Image Two](img/signup.png)
+
+### Home Page
+
+![Image One](img/home.png)
 
 
 ## Features
