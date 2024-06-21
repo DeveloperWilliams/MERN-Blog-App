@@ -5,10 +5,12 @@ import Signup from './authFolder/Signup'
 import Forgot from './authFolder/Forgot'
 import Reset from './authFolder/Reset'
 import Verify from './authFolder/verify'
+import Home from './homeFolder/Home'
 
 function App() {
   return (
     <Routes>
+      <Route path='/' element={<Home/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/signup' element={<Signup/>}></Route>
       <Route path='/forgot-password' element={<Forgot/>}></Route>

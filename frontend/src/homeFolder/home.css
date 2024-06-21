@@ -1,0 +1,50 @@
+.home {
+  height: 110vh;
+  width: 100%;
+  background: url("./homy.jpg");
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 120px;
+}
+h4 {
+  font-family: "Pacifico", cursive;
+  font-family: "Kanit", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+h4 em {
+  color: rgb(219, 16, 182);
+}
+.nav a {
+  text-decoration: none;
+  padding: 10px 18px;
+  background-color: rgb(219, 16, 182);
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-family: "Kanit", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-family: "Oswald", sans-serif;
+}
+.body {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.body img {
+  height: 70vh;
+}
+.lower {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 34px;
+}
+.lower em{
+    color: rgb(6, 188, 191);
+}
