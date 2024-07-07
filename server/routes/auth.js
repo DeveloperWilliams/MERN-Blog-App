@@ -111,7 +111,7 @@ router.post(
       if (!user.isVerified) {
         return res
           .status(400)
-          .json({ message: "Email Not Verified", redirect: "/notverified" });
+          .json({ message: "Email Not Verified", redirect: "/not-verified" });
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
