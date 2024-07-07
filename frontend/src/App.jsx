@@ -6,6 +6,7 @@ import Forgot from './authFolder/Forgot'
 import Reset from './authFolder/Reset'
 import Verify from './authFolder/verify'
 import Home from './homeFolder/Home'
+import Create from './blogFolder/Create'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/forgot-password' element={<Forgot/>}></Route>
       <Route path='/reset-password/:token' element={<Reset/>}></Route>
       <Route path='/verify/:token' element={<Verify/>}></Route>
+      <Route path='/create-blog/:id' element={<Create/>}></Route>
     </Routes>
   )
 }

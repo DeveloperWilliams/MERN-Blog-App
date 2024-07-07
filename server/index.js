@@ -17,10 +17,12 @@ app.use(cookieParser());
 //ROUTES 
 //import
 import authRoute from "./routes/auth.js"
+import blogRoute from "./routes/data.js"
 
 
 //using routes
 app.use('/auth', authRoute)
+app.use('/blog', blogRoute)
 
 // MongoDB
 mongoose
