@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 import Usermodel from "../model/User.js";
 import { body, validationResult } from "express-validator";
+import verifyToken from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -200,5 +201,9 @@ router.post(
     }
   }
 );
+
+router.get("/protected", verifyToken, (req, res, next)=>{
+  res.status(200).json({message: "This protected route", user: req.user})
+})
 
 export default router;
