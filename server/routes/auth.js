@@ -22,9 +22,7 @@ router.post(
   "/register",
   [
     body("email").isEmail().withMessage("Please enter a valid email"),
-    body("password")
-      .isStrongPassword()
-      .withMessage("Use a strong Password"),
+    body("password").isStrongPassword().withMessage("Use a strong Password"),
     body("confirmedPassword")
       .custom((value, { req }) => value === req.body.password)
       .withMessage("Passwords do not match"),
@@ -57,7 +55,7 @@ router.post(
       await transporter.sendMail({
         to: user.email,
         subject: `Verify Email`,
-        html:  `Please click on the link to verify: ${url}`
+        html: `Please click on the link to verify: <a href="${url}">Here</a>`,
       });
 
       res.status(201).json({ message: "User Created" });
@@ -99,7 +97,8 @@ router.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
-    }e
+    }
+    
 
     const { email, password } = req.body;
 
@@ -155,7 +154,7 @@ router.post("/forgot", async (req, res) => {
     await transporter.sendMail({
       to: user.email,
       subject: `Reset Password`,
-       html: `<h3>Reset your password by clicking <a href="${url}">here</a></h3>`
+      html: `<h3>Reset your password by clicking <a href="${url}">here</a></h3>`,
     });
 
     res.status(200).json({ message: "Reset Link Sent" });
@@ -202,8 +201,8 @@ router.post(
   }
 );
 
-router.get("/protected", verifyToken, (req, res, next)=>{
-  res.status(200).json({message: "This protected route", user: req.user})
-})
+router.get("/protected", verifyToken, (req, res, next) => {
+  res.status(200).json({ message: "This protected route", user: req.user });
+});
 
 export default router;
