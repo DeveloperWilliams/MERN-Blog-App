@@ -57,7 +57,7 @@ router.post(
       await transporter.sendMail({
         to: user.email,
         subject: `Verify Email`,
-        text: `Please click on the link to verify: ${url}`,
+        html:  `Please click on the link to verify: ${url}`
       });
 
       res.status(201).json({ message: "User Created" });
@@ -99,7 +99,7 @@ router.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
-    }
+    }e
 
     const { email, password } = req.body;
 
