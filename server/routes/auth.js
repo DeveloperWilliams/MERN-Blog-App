@@ -58,7 +58,7 @@ router.post(
         html: `Please click on the link to verify: <a href="${url}">Here</a>`,
       });
 
-      res.status(201).json({ message: "User Created" });
+      res.status(201).json({ message: "User Created, Verify Email Now" });
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
