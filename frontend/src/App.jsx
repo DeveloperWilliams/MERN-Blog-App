@@ -8,6 +8,7 @@ import Verify from './authFolder/verify'
 import Home from './homeFolder/Home'
 import Create from './blogFolder/Create'
 import NotVerified from './authFolder/NotVerified'
+import HomeBlog from './blogFolder/homeBlog/homeBlog'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/verify/:token' element={<Verify/>}></Route>
       <Route path='/create-blog/:id' element={<Create/>}></Route>
       <Route path='/not-verified' element={<NotVerified/>}></Route>
+      <Route path='/home' element={<HomeBlog/>}></Route>
     </Routes>
   )
 }

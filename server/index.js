@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 
 //ROUTES 
-//import
+//import  
 import authRoute from "./routes/auth.js"
 import blogRoute from "./routes/data.js"
 
